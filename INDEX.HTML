@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOWCRAZE & SLAY BEAUTY SALON</title>
+    <style>
+        :root {
+            --primary-pink: #ff758c;
+            --soft-pink: #ffe4ec;
+            --gradient-pink: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            --dark-text: #333;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fffafc;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--gradient-pink);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .hero {
+            height: 60vh;
+            background: url('images.jpeg') no-repeat center center/cover; /* Using one of your images as a placeholder bg */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Overlay to make text readable */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            max-width: 80%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-pink);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary-pink);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 117, 140, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-pink);
+        }
+
+        .contact-section {
+            background: var(--soft-pink);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background: var(--primary-pink);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #ff4d6d;
+        }
+
+        footer {
+            background: #222;
+            color: #efefef;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Responsive Fix */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+     
+    <header>
+        <h1>GLOWCRAZE & SLAY</h1>
+        <p>LET THE BEAUTY SHINE!</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>RELAX. REFRESH. REJUVENATE.</h1>
+            <p>Experience Your True Beauty With Us.</p>
+        </div>
+    </div>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <img src="images.jpeg" alt="Hair Styling">
+                <div class="card-info">
+                    <h3>Hair Styling</h3>
+                    <p>Trendy and classic hairstyles tailored for you.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (2).jpeg" alt="Makeup">
+                <div class="card-info">
+                    <h3>Makeup</h3>
+                    <p>Perfect makeup for every special occasion.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download.jpeg" alt="Spa">
+                <div class="card-info">
+                    <h3>Spa & Relaxation</h3>
+                    <p>Relaxing treatments to refresh your body.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images (1).jpeg" alt="Manicure">
+                <div class="card-info">
+                    <h3>Manicure</h3>
+                    <p>Professional nail care and art.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (3).jpeg" alt="Pedicure">
+                <div class="card-info">
+                    <h3>Pedicure</h3>
+                    <p>Attractive and healthy foot care.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="eyelashes.jpeg" alt="Eyelashes">
+                <div class="card-info">
+                    <h3>Eyelash Extension</h3>
+                    <p>Natural-looking, voluminous lashes.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (1).jpeg" alt="Laser">
+                <div class="card-info">
+                    <h3>Laser Hair Removal</h3>
+                    <p>Smooth skin with permanent reduction.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (4).jpeg" alt="Body Sculpting">
+                <div class="card-info">
+                    <h3>Body Sculpting</h3>
+                    <p>Enhance and contour your natural shape.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (5).jpeg" alt="Tattoo Removal">
+                <div class="card-info">
+                    <h3>Tattoo Removal</h3>
+                    <p>Safe and effective permanent removal.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="download (6).jpeg" alt="Threading">
+                <div class="card-info">
+                    <h3>Threading</h3>
+                    <p>Precision brow shaping for confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section">
+            <h2>Book An Appointment</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GLOWCRAZE & SLAY BEAUTY SALON. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
